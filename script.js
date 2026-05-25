@@ -8,8 +8,7 @@ const I18N = {
   az: {
     "hero.title":        "İki balaca ürəyin döyünməsi sizin dəstəyinizdən asılıdır",
     "hero.names":        "Həsən və Hüseyn Cəfərov",
-    "hero.subtitle":     "Əkiz qardaşlarımızın ürək əməliyyatı üçün dəstəyinizə ehtiyac var.",
-    "hero.cta":          "Kartlara bax",
+    "fab.cards":         "Kartlara bax",
 
     "story.title":       "Hekayələri",
     "story.body":        "Əkiz qardaşlar Həsən və Hüseyn ağır ürək qüsuru ilə mübarizə aparırlar. Onların ürəyində dəlik var və ciddi ürək ritm pozğunluğu (paroksizm) aşkarlanıb. Həkimlər bildirir ki, ürəyin fəaliyyətini qorumaq üçün təcili olaraq ürəyə xüsusi aparat yerləşdirilməlidir. Əks halda ürək hər an fəaliyyətini dayandıra bilər. Təəssüf ki, bu əməliyyatın Azərbaycanda mümkün müalicəsi yoxdur. Həkimlərin tövsiyəsi ilə uşaqların İsraildə əməliyyat olunması planlaşdırılır.",
@@ -41,8 +40,7 @@ const I18N = {
   ru: {
     "hero.title":        "Биение двух маленьких сердец зависит от вашей поддержки",
     "hero.names":        "Хасан и Хусейн Джафаровы",
-    "hero.subtitle":     "Нашим братьям-близнецам нужна ваша помощь для операции на сердце.",
-    "hero.cta":          "Посмотреть карты",
+    "fab.cards":         "Посмотреть карты",
 
     "story.title":       "Их история",
     "story.body":        "Братья-близнецы Хасан и Хусейн борются с тяжёлым пороком сердца. У них в сердце имеется отверстие, и выявлено серьёзное нарушение сердечного ритма (пароксизм). Врачи сообщают, что для сохранения работы сердца необходимо срочно установить специальный аппарат. В противном случае сердце может остановиться в любой момент. К сожалению, данная операция недоступна в Азербайджане. По рекомендации врачей планируется проведение операции в Израиле.",
@@ -74,8 +72,7 @@ const I18N = {
   en: {
     "hero.title":        "The beating of two little hearts depends on your support",
     "hero.names":        "Hasan and Huseyn Jafarov",
-    "hero.subtitle":     "Our twin brothers need your help for heart surgery.",
-    "hero.cta":          "View bank cards",
+    "fab.cards":         "View bank cards",
 
     "story.title":       "Their Story",
     "story.body":        "Twin brothers Hasan and Huseyn are battling a severe heart defect. They have a hole in their hearts, and a serious heart rhythm disorder (paroxysm) has been detected. Doctors say that a special device must urgently be implanted in the heart to preserve its function. Otherwise, the heart could stop at any moment. Unfortunately, this surgery is not available in Azerbaijan. On the doctors' recommendation, the surgery is planned to be carried out in Israel.",
@@ -262,11 +259,23 @@ function initCopyButtons() {
   });
 }
 
+// ---------- FLOATING "VIEW CARDS" BUTTON ----------
+// Click smooth-scrolls to the donation section and centers it in the viewport.
+function initCardsFab() {
+  const fab = document.getElementById("cardsFab");
+  if (!fab) return;
+  fab.addEventListener("click", () => {
+    const target = document.getElementById("donate");
+    if (!target) return;
+    target.scrollIntoView({ behavior: "smooth", block: "center" });
+  });
+}
+
 // ---------- SCROLL ANIMATIONS ----------
 function initScrollAnimations() {
   // Mark anything that should fade-in
   document.querySelectorAll(
-    ".hero-title, .hero-names, .hero-subtitle, .hero .btn, " +
+    ".hero-title, .hero-names, " +
     ".story-text, .condition-card, .bank-card, " +
     ".section-title, .section-caption"
   ).forEach((el) => el.classList.add("fade-in"));
@@ -293,6 +302,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initLangSwitcher();
   initLightbox();
   initCopyButtons();
+  initCardsFab();
   applyLang(getStoredLang());
   initScrollAnimations();
 });

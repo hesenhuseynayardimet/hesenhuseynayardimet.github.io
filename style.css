@@ -562,6 +562,43 @@ h1, h2, h3 {
 
 .footer-bottom p { margin: 0; }
 
+/* ============== FLOATING "VIEW CARDS" BUTTON ============== */
+/* Always visible, horizontally centered near the bottom.
+   On click: smooth-scrolls and centers the donation section in viewport. */
+.cards-fab {
+  position: fixed;
+  bottom: 26px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 999px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+  z-index: 95;
+  box-shadow: 0 10px 28px rgba(58, 166, 160, 0.45);
+  transition: background var(--transition), box-shadow var(--transition), transform var(--transition);
+}
+
+.cards-fab:hover {
+  background: var(--accent-dark);
+  transform: translateX(-50%) translateY(-2px);
+  box-shadow: 0 14px 34px rgba(58, 166, 160, 0.55);
+}
+
+.cards-fab:active {
+  transform: translateX(-50%) translateY(0);
+}
+
+.cards-fab:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.6);
+  outline-offset: 2px;
+}
+
 /* ============== WHATSAPP FAB ============== */
 .whatsapp-fab {
   position: fixed;
@@ -649,7 +686,7 @@ h1, h2, h3 {
 /* ============== TOAST ============== */
 .toast {
   position: fixed;
-  bottom: 100px;
+  bottom: 110px;
   left: 50%;
   transform: translateX(-50%) translateY(10px);
   background: var(--text);
@@ -699,6 +736,16 @@ h1, h2, h3 {
 
   .whatsapp-fab { width: 54px; height: 54px; bottom: 18px; right: 18px; }
   .whatsapp-fab svg { width: 30px; height: 30px; }
+
+  /* Mobile: shrink cards-fab so it never overlaps the WhatsApp circle */
+  .cards-fab {
+    bottom: 18px;
+    padding: 11px 20px;
+    font-size: 0.92rem;
+    letter-spacing: 0;
+    /* Cap width so RU/EN translations still leave room for WhatsApp */
+    max-width: calc(100vw - 96px);
+  }
 
   .lightbox-close, .lightbox-nav { width: 38px; height: 38px; }
   .lightbox-close { top: 12px; right: 12px; }
