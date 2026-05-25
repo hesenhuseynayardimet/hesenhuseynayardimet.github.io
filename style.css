@@ -822,10 +822,10 @@ h1, h2, h3 {
   }
 
   /* Scroll indicator sits well above the "Kartlara bax" pill on mobile.
-     iOS Safari's overlapping bottom toolbar can shift fixed elements upward,
-     so we keep generous clearance to avoid the label colliding with the button. */
+     Mobile browser bottom chrome (URL bar / nav pill) eats vertical space,
+     so we keep generous clearance to avoid colliding with the button. */
   .hero-scroll {
-    bottom: 115px;
+    bottom: 170px;
     font-size: 0.72rem;
     letter-spacing: 1.2px;
     gap: 6px;
