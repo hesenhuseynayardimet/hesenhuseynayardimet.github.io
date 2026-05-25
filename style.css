@@ -78,7 +78,7 @@ h1, h2, h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 68px;
+  height: 52px;
 }
 
 .brand {
@@ -92,8 +92,8 @@ h1, h2, h3 {
 }
 
 .brand-hearts {
-  width: 42px;
-  height: 24px;
+  width: 36px;
+  height: 20px;
   fill: var(--heart);
 }
 
@@ -101,16 +101,16 @@ h1, h2, h3 {
 
 .lang-switcher {
   display: flex;
-  gap: 4px;
+  gap: 3px;
   background: var(--accent-soft);
-  padding: 4px;
+  padding: 3px;
   border-radius: 999px;
 }
 
 .lang-btn {
-  padding: 7px 14px;
+  padding: 5px 12px;
   border-radius: 999px;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.5px;
   color: var(--accent-dark);
@@ -795,10 +795,10 @@ h1, h2, h3 {
 
 /* ============== RESPONSIVE ============== */
 @media (max-width: 640px) {
-  .header-inner { height: 60px; }
-  .brand-text { font-size: 0.98rem; }
-  .brand-hearts { width: 36px; }
-  .lang-btn { padding: 6px 11px; font-size: 0.78rem; }
+  .header-inner { height: 46px; }
+  .brand-text { font-size: 0.95rem; }
+  .brand-hearts { width: 30px; height: 17px; }
+  .lang-btn { padding: 4px 10px; font-size: 0.75rem; }
 
   .hero { padding: 56px 0 72px; }
   .hero-hearts { width: 90px; margin-bottom: 22px; }
