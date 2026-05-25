@@ -1,0 +1,28 @@
+HESEN VE HUSEYN — SAYT SEKILLERI
+=================================
+
+Bu zip-i acib, "images" qovlugunu bütövlükdə
+saytin esas qovluguna kopyala.
+
+ICERIK:
+
+SENEDLER (5):
+  doc-1.jpg  — Neftçiler Xestexanasi mektubu (ingilisce)
+  doc-2.jpg  — Hüseyn exokardioqrafiya protokolu
+  doc-3.jpg  — Hesen exokardioqrafiya protokolu
+  doc-4.jpg  — Notarial tercüme
+  doc-5.jpg  — Mektub (Azerbaycanca orijinal)
+
+USAQ FOTOLARI (9):
+  photo-1.jpg — EKG aparatina qosulu
+  photo-2.jpg — EKG aparatina qosulu
+  photo-3.jpg — her iki ekiz birlikde
+  photo-4.jpg — her iki ekiz birlikde
+  photo-5.jpg — xestexana xalatinda
+  photo-6.jpg — xestexana xalatinda
+  photo-7.jpg — xestexana xalatinda
+  photo-8.jpg — HÜSEYN (narinci köynek, ev)
+  photo-9.jpg — HESEN (yasil köynek, ev)
+
+QEYD: Fayllar texniki olaraq PNG-dir, sadece .jpg adi
+verilib. Brauzer normal acir, problem yoxdur.
