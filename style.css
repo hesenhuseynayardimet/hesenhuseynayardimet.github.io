@@ -589,6 +589,51 @@ h1, h2, h3 {
 
 .footer-bottom p { margin: 0; }
 
+/* ============== HERO SCROLL INDICATOR ============== */
+/* Absolute-positioned inside the hero so it scrolls away with the hero.
+   Sits ABOVE the floating "Kartlara bax" button in screen coords. */
+.hero-scroll {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-scroll:hover {
+  color: #fff;
+  transform: translateX(-50%) translateY(-2px);
+}
+
+.hero-scroll-chevron {
+  width: 24px;
+  height: 14px;
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.9);
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
+  animation: scrollBounce 1.8s ease-in-out infinite;
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(6px); }
+}
+
 /* ============== FLOATING "VIEW CARDS" BUTTON ============== */
 /* Always visible, horizontally centered near the bottom.
    On click: smooth-scrolls and centers the donation section in viewport. */
@@ -774,6 +819,15 @@ h1, h2, h3 {
     /* Cap width so RU/EN translations still leave room for WhatsApp */
     max-width: calc(100vw - 96px);
   }
+
+  /* Scroll indicator sits closer to bottom on mobile, tighter typography */
+  .hero-scroll {
+    bottom: 78px;
+    font-size: 0.72rem;
+    letter-spacing: 1.2px;
+    gap: 6px;
+  }
+  .hero-scroll-chevron { width: 20px; height: 12px; }
 
   .lightbox-close, .lightbox-nav { width: 38px; height: 38px; }
   .lightbox-close { top: 12px; right: 12px; }

@@ -8,6 +8,7 @@ const I18N = {
   az: {
     "hero.title":        "İki balaca ürəyin döyünməsi sizin dəstəyinizdən asılıdır",
     "hero.names":        "Həsən və Hüseyn Cəfərov",
+    "hero.scroll":       "Aşağı sürüşdürün",
     "fab.cards":         "Kartlara bax",
 
     "story.title":       "Hekayələri",
@@ -40,6 +41,7 @@ const I18N = {
   ru: {
     "hero.title":        "Биение двух маленьких сердец зависит от вашей поддержки",
     "hero.names":        "Хасан и Хусейн Джафаровы",
+    "hero.scroll":       "Прокрутите вниз",
     "fab.cards":         "Посмотреть карты",
 
     "story.title":       "Их история",
@@ -72,6 +74,7 @@ const I18N = {
   en: {
     "hero.title":        "The beating of two little hearts depends on your support",
     "hero.names":        "Hasan and Huseyn Jafarov",
+    "hero.scroll":       "Scroll down",
     "fab.cards":         "View bank cards",
 
     "story.title":       "Their Story",
