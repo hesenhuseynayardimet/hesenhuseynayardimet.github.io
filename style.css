@@ -609,6 +609,7 @@ h1, h2, h3 {
   letter-spacing: 1.4px;
   text-transform: uppercase;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  white-space: nowrap;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -820,9 +821,11 @@ h1, h2, h3 {
     max-width: calc(100vw - 96px);
   }
 
-  /* Scroll indicator sits closer to bottom on mobile, tighter typography */
+  /* Scroll indicator sits well above the "Kartlara bax" pill on mobile.
+     iOS Safari's overlapping bottom toolbar can shift fixed elements upward,
+     so we keep generous clearance to avoid the label colliding with the button. */
   .hero-scroll {
-    bottom: 78px;
+    bottom: 115px;
     font-size: 0.72rem;
     letter-spacing: 1.2px;
     gap: 6px;
