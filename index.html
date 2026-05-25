@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="style.css?v=7" />
+  <link rel="stylesheet" href="style.css?v=8" />
 </head>
 <body>
 
@@ -34,6 +34,7 @@
 
       <nav class="lang-switcher" aria-label="Language">
         <button type="button" class="lang-btn" data-lang="az">AZ</button>
+        <button type="button" class="lang-btn" data-lang="tr">TR</button>
         <button type="button" class="lang-btn" data-lang="ru">RU</button>
         <button type="button" class="lang-btn" data-lang="en">EN</button>
       </nav>
@@ -121,6 +122,29 @@
             <span class="medical">(tibbi: 2 kiçik VSD, PFO).</span>
           </p>
         </article>
+
+        <article class="condition-card contact-card">
+          <div class="condition-card-header">
+            <svg class="card-heart" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 21s-9-6-9-12.5C3 4.4 6.1 2 9 2c1.7 0 3.2.9 3.7 2.2.5-1.3 2-2.2 3.7-2.2 2.9 0 6 2.4 6 6.5C22.4 15 13.5 21 12 21z"/>
+            </svg>
+            <h3 data-i18n="contact.cardTitle">Ailə</h3>
+          </div>
+          <ul class="contact-info">
+            <li>
+              <span class="contact-info-label" data-i18n="contact.father">Ata</span>
+              <span class="contact-info-value" data-i18n="contact.fatherName">Daşdəmir Cəfərov</span>
+            </li>
+            <li>
+              <span class="contact-info-label" data-i18n="contact.address">Ünvan</span>
+              <span class="contact-info-value" data-i18n="contact.addressValue">Sumqayıt şəhəri, 6-cı mikrorayon, Bina 35K, Mənzil 73 (kirayə)</span>
+            </li>
+            <li>
+              <span class="contact-info-label" data-i18n="contact.phone">Telefon</span>
+              <a class="contact-info-value contact-tel" href="tel:+994505567143">+994 50 556 71 43</a>
+            </li>
+          </ul>
+        </article>
       </div>
     </div>
   </section>
@@ -179,7 +203,7 @@
                   data-copy="4169738869168397"
                   data-target="card-kapital">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
-            <span data-i18n="donate.copy">Kopyala</span>
+            <span class="btn-copy-label" data-i18n="donate.copy">Kopyala</span>
           </button>
         </article>
 
@@ -193,7 +217,7 @@
                   data-copy="4127209308707402"
                   data-target="card-abb">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
-            <span data-i18n="donate.copy">Kopyala</span>
+            <span class="btn-copy-label" data-i18n="donate.copy">Kopyala</span>
           </button>
         </article>
 
@@ -207,44 +231,22 @@
                   data-copy="4098584499807020"
                   data-target="card-leo">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
-            <span data-i18n="donate.copy">Kopyala</span>
+            <span class="btn-copy-label" data-i18n="donate.copy">Kopyala</span>
           </button>
         </article>
 
       </div>
+
+      <p class="trust-note" data-i18n="donate.trust">
+        Hər üç kart ailənin özünə — <strong class="trust-name">Cəfərova Günəş Daşdəmir qızına</strong> aiddir və yalnız onun şəxsi nəzarətindədir. Bütün yardımlar birbaşa uşaqların müalicəsi üçün ailənin özünə çatır.
+      </p>
     </div>
   </section>
 
-  <!-- ============== CONTACT / FOOTER ============== -->
-  <footer id="contact" class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h2 class="section-title light" data-i18n="contact.title">Əlaqə</h2>
-        <div class="section-accent" aria-hidden="true">
-          <svg viewBox="0 0 40 14"><path d="M10 12s-8-4.5-8-8C2 1.8 4 1 6 1c1.5 0 3 .8 4 2 1-1.2 2.5-2 4-2 2 0 4 .8 4 3 0 3.5-8 8-8 8zM30 12s-8-4.5-8-8C22 1.8 24 1 26 1c1.5 0 3 .8 4 2 1-1.2 2.5-2 4-2 2 0 4 .8 4 3 0 3.5-8 8-8 8z"/></svg>
-        </div>
-      </div>
-
-      <ul class="contact-list">
-        <li>
-          <span class="contact-label" data-i18n="contact.father">Ata</span>
-          <span class="contact-value" data-i18n="contact.fatherName">Daşdəmir Cəfərov</span>
-        </li>
-        <li>
-          <span class="contact-label" data-i18n="contact.address">Ünvan</span>
-          <span class="contact-value" data-i18n="contact.addressValue">
-            Sumqayıt şəhəri, 6-cı mikrorayon, Bina 35K, Mənzil 73 (kirayə)
-          </span>
-        </li>
-        <li>
-          <span class="contact-label" data-i18n="contact.phone">Telefon</span>
-          <a class="contact-value contact-link" href="tel:+994505567143">+994 50 556 71 43</a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="footer-bottom">
-      <p data-i18n="footer.note">© Həsən və Hüseyn Cəfərov üçün yardım kampaniyası</p>
+  <!-- ============== FOOTER (just names + year) ============== -->
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <p data-i18n="footer.note">© 2026 Həsən və Hüseyn Cəfərov</p>
     </div>
   </footer>
 
@@ -272,9 +274,6 @@
     <button class="lightbox-nav lightbox-next" type="button" id="lightboxNext" aria-label="Next">&#8250;</button>
   </div>
 
-  <!-- ============== COPY TOAST ============== -->
-  <div class="toast" id="toast" data-i18n="donate.copied">Kopyalandı</div>
-
-  <script src="script.js?v=4"></script>
+  <script src="script.js?v=8"></script>
 </body>
 </html>

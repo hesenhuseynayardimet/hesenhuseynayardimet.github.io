@@ -18,7 +18,7 @@ const I18N = {
     "condition.hasan":   "Anadangəlmə ürək qüsuru — ürəkdə dəlik. <span class=\"medical\">(tibbi: VSD ~9 mm, PFO, aberran bant)</span>",
     "condition.huseyn":  "Anadangəlmə ürək qüsuru — ürəkdə dəliklər. <span class=\"medical\">(tibbi: 2 kiçik VSD, PFO)</span>",
 
-    "gallery.title":     "Foto Qalereya",
+    "gallery.title":     "Həsən-Hüseynin gözündən",
 
     "docs.title":        "Rəsmi Sənədlər",
     "docs.caption":      "Bu sənədlər diaqnozu və müalicənin Azərbaycanda mümkün olmamasını təsdiq edir.",
@@ -27,15 +27,50 @@ const I18N = {
     "donate.caption":    "Bütün kartlar ailənin adına qeydiyyatdadır.",
     "donate.copy":       "Kopyala",
     "donate.copied":     "Kopyalandı",
+    "donate.trust":      "Hər üç kart ailənin özünə — <strong class=\"trust-name\">Cəfərova Günəş Daşdəmir qızına</strong> aiddir və yalnız onun şəxsi nəzarətindədir. Bütün yardımlar birbaşa uşaqların müalicəsi üçün ailənin özünə çatır.",
 
-    "contact.title":         "Əlaqə",
+    "contact.cardTitle":     "Ailə",
     "contact.father":        "Ata",
     "contact.fatherName":    "Daşdəmir Cəfərov",
     "contact.address":       "Ünvan",
     "contact.addressValue":  "Sumqayıt şəhəri, 6-cı mikrorayon, Bina 35K, Mənzil 73 (kirayə)",
     "contact.phone":         "Telefon",
 
-    "footer.note":       "© Həsən və Hüseyn Cəfərov üçün yardım kampaniyası"
+    "footer.note":       "© 2026 Həsən və Hüseyn Cəfərov"
+  },
+
+  tr: {
+    "hero.title":        "İki küçük yüreğin atışı sizin desteğinize bağlı",
+    "hero.names":        "Həsən ve Hüseyn Cəfərov",
+    "hero.scroll":       "Aşağı kaydırın",
+    "fab.cards":         "Kartlara bak",
+
+    "story.title":       "Hikayeleri",
+    "story.body":        "İkiz kardeşler Həsən ve Hüseyn ağır kalp kusuru ile mücadele ediyorlar. Kalplerinde delik var ve ciddi kalp ritim bozukluğu (paroksizm) tespit edildi. Doktorlar belirtiyor ki, kalbin işlevini korumak için acilen kalbe özel bir cihaz yerleştirilmelidir. Aksi takdirde kalp her an çalışmayı durdurabilir. Maalesef bu ameliyatın Azerbaycan'da mümkün tedavisi yoktur. Doktorların tavsiyesi üzerine çocukların İsrail'de ameliyat olmaları planlanıyor.",
+
+    "condition.title":   "Tıbbi Durum",
+    "condition.hasan":   "Doğuştan kalp kusuru — kalpte delik. <span class=\"medical\">(tıbbi: VSD ~9 mm, PFO, aberran bant)</span>",
+    "condition.huseyn":  "Doğuştan kalp kusuru — kalpte delikler. <span class=\"medical\">(tıbbi: 2 küçük VSD, PFO)</span>",
+
+    "gallery.title":     "Həsən ve Hüseyn'in gözünden",
+
+    "docs.title":        "Resmi Belgeler",
+    "docs.caption":      "Bu belgeler tanıyı ve tedavinin Azerbaycan'da mümkün olmadığını teyit ediyor.",
+
+    "donate.title":      "Yardım için",
+    "donate.caption":    "Tüm kartlar ailenin adına kayıtlıdır.",
+    "donate.copy":       "Kopyala",
+    "donate.copied":     "Kopyalandı",
+    "donate.trust":      "Üç kartın tamamı ailenin kendisine — <strong class=\"trust-name\">Cəfərova Günəş Daşdəmir qızı'na</strong> aittir ve yalnızca onun kişisel kontrolündedir. Tüm yardımlar doğrudan çocukların tedavisi için ailenin kendisine ulaşır.",
+
+    "contact.cardTitle":     "Aile",
+    "contact.father":        "Baba",
+    "contact.fatherName":    "Daşdəmir Cəfərov",
+    "contact.address":       "Adres",
+    "contact.addressValue":  "Sumqayıt şehri, 6. mikrorayon, Bina 35K, Daire 73 (kira)",
+    "contact.phone":         "Telefon",
+
+    "footer.note":       "© 2026 Həsən ve Hüseyn Cəfərov"
   },
 
   ru: {
@@ -51,7 +86,7 @@ const I18N = {
     "condition.hasan":   "Врождённый порок сердца — отверстие в сердце. <span class=\"medical\">(медицинский: ДМЖП ~9 мм, ООО, аберрантный пучок)</span>",
     "condition.huseyn":  "Врождённый порок сердца — отверстия в сердце. <span class=\"medical\">(медицинский: 2 малых ДМЖП, ООО)</span>",
 
-    "gallery.title":     "Фотогалерея",
+    "gallery.title":     "Глазами Хасана и Хусейна",
 
     "docs.title":        "Официальные документы",
     "docs.caption":      "Эти документы подтверждают диагноз и то, что лечение в Азербайджане недоступно.",
@@ -60,15 +95,16 @@ const I18N = {
     "donate.caption":    "Все карты оформлены на семью.",
     "donate.copy":       "Копировать",
     "donate.copied":     "Скопировано",
+    "donate.trust":      "Все три карты принадлежат самой семье — <strong class=\"trust-name\">Джафаровой Гюнеш Дашдемир кызы</strong>, и находятся исключительно под её личным контролем. Все пожертвования напрямую поступают самой семье на лечение детей.",
 
-    "contact.title":         "Контакты",
+    "contact.cardTitle":     "Семья",
     "contact.father":        "Отец",
     "contact.fatherName":    "Дашдемир Джафаров",
     "contact.address":       "Адрес",
     "contact.addressValue":  "г. Сумгаит, 6-й микрорайон, дом 35К, квартира 73 (съёмная)",
     "contact.phone":         "Телефон",
 
-    "footer.note":       "© Кампания помощи Хасану и Хусейну Джафаровым"
+    "footer.note":       "© 2026 Хасан и Хусейн Джафаровы"
   },
 
   en: {
@@ -84,7 +120,7 @@ const I18N = {
     "condition.hasan":   "Congenital heart defect — a hole in the heart. <span class=\"medical\">(medical: VSD ~9 mm, PFO, aberrant band)</span>",
     "condition.huseyn":  "Congenital heart defect — holes in the heart. <span class=\"medical\">(medical: 2 small VSD, PFO)</span>",
 
-    "gallery.title":     "Photo Gallery",
+    "gallery.title":     "Through Həsən & Hüseyn's eyes",
 
     "docs.title":        "Official Documents",
     "docs.caption":      "These documents confirm the diagnosis and that treatment is not available in Azerbaijan.",
@@ -93,20 +129,21 @@ const I18N = {
     "donate.caption":    "All cards are registered in the family's name.",
     "donate.copy":       "Copy",
     "donate.copied":     "Copied",
+    "donate.trust":      "All three cards belong to the family itself — <strong class=\"trust-name\">Jafarova Gunesh Dashdamir gizi</strong> — and are under her personal control only. All donations go directly to the family for the children's treatment.",
 
-    "contact.title":         "Contact",
+    "contact.cardTitle":     "Family",
     "contact.father":        "Father",
     "contact.fatherName":    "Dashdamir Jafarov",
     "contact.address":       "Address",
     "contact.addressValue":  "Sumgayit city, 6th microdistrict, Building 35K, Apartment 73 (rented)",
     "contact.phone":         "Phone",
 
-    "footer.note":       "© Fundraising campaign for Hasan and Huseyn Jafarov"
+    "footer.note":       "© 2026 Hasan and Huseyn Jafarov"
   }
 };
 
 // ---------- LANGUAGE SWITCHING ----------
-const SUPPORTED = ["az", "ru", "en"];
+const SUPPORTED = ["az", "tr", "ru", "en"];
 const DEFAULT_LANG = "az";
 
 function getStoredLang() {
@@ -176,6 +213,9 @@ const lightboxNext = document.getElementById("lightboxNext");
 
 let lbList = [];
 let lbIndex = 0;
+// Track whether we've pushed a history entry for the open lightbox so the
+// phone BACK button just closes the lightbox instead of leaving the site.
+let lbStatePushed = false;
 
 function openLightbox(list, idx) {
   lbList = list;
@@ -184,12 +224,27 @@ function openLightbox(list, idx) {
   lightbox.classList.add("open");
   lightbox.setAttribute("aria-hidden", "false");
   document.body.style.overflow = "hidden";
+
+  // Push one history entry per open; navigation between photos shares it.
+  if (!lbStatePushed) {
+    history.pushState({ lightbox: true }, "");
+    lbStatePushed = true;
+  }
 }
 
-function closeLightbox() {
+// fromPopstate=true means the browser has already popped the history entry
+// (user pressed BACK / swiped back), so we must NOT call history.back() again.
+function closeLightbox(fromPopstate) {
   lightbox.classList.remove("open");
   lightbox.setAttribute("aria-hidden", "true");
   document.body.style.overflow = "";
+
+  if (lbStatePushed && !fromPopstate) {
+    lbStatePushed = false;
+    history.back();
+  } else {
+    lbStatePushed = false;
+  }
 }
 
 function navLightbox(delta) {
@@ -199,36 +254,30 @@ function navLightbox(delta) {
 }
 
 function initLightbox() {
-  lightboxClose.addEventListener("click", closeLightbox);
+  lightboxClose.addEventListener("click", () => closeLightbox(false));
   lightboxPrev.addEventListener("click", () => navLightbox(-1));
   lightboxNext.addEventListener("click", () => navLightbox(1));
 
   // Click outside image closes
   lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) closeLightbox();
+    if (e.target === lightbox) closeLightbox(false);
   });
 
   // Keyboard navigation
   document.addEventListener("keydown", (e) => {
     if (!lightbox.classList.contains("open")) return;
-    if (e.key === "Escape")      closeLightbox();
+    if (e.key === "Escape")      closeLightbox(false);
     if (e.key === "ArrowLeft")   navLightbox(-1);
     if (e.key === "ArrowRight")  navLightbox(1);
+  });
+
+  // Phone BACK button / browser back closes the lightbox instead of the site.
+  window.addEventListener("popstate", () => {
+    if (lightbox.classList.contains("open")) closeLightbox(true);
   });
 }
 
 // ---------- COPY-TO-CLIPBOARD ----------
-const toast = document.getElementById("toast");
-let toastTimer;
-
-function showToast() {
-  const lang = getStoredLang();
-  toast.textContent = I18N[lang]["donate.copied"];
-  toast.classList.add("show");
-  clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => toast.classList.remove("show"), 2000);
-}
-
 async function copyToClipboard(text) {
   try {
     await navigator.clipboard.writeText(text);
@@ -250,14 +299,24 @@ async function copyToClipboard(text) {
 
 function initCopyButtons() {
   document.querySelectorAll(".btn-copy").forEach((btn) => {
+    const labelEl = btn.querySelector(".btn-copy-label");
+    let revertTimer;
+
     btn.addEventListener("click", async () => {
       const num = btn.getAttribute("data-copy");
       const ok = await copyToClipboard(num);
-      if (ok) {
-        showToast();
-        btn.classList.add("copied");
-        setTimeout(() => btn.classList.remove("copied"), 1200);
-      }
+      if (!ok) return;
+
+      // Swap label to "Kopyalandı" + green success state for ~2 seconds.
+      const dict = I18N[getStoredLang()];
+      labelEl.textContent = dict["donate.copied"];
+      btn.classList.add("copied");
+
+      clearTimeout(revertTimer);
+      revertTimer = setTimeout(() => {
+        labelEl.textContent = I18N[getStoredLang()]["donate.copy"];
+        btn.classList.remove("copied");
+      }, 2000);
     });
   });
 }
