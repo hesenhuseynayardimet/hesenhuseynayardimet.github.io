@@ -16,7 +16,7 @@ const I18N = {
 
     "condition.title":   "Tibbi Vəziyyət",
     "condition.hasan":   "Anadangəlmə ürək qüsuru — ürəkdə dəlik. <span class=\"medical\">(tibbi: VSD ~9 mm, PFO, aberran bant)</span>",
-    "condition.huseyn":  "Anadangəlmə ürək qüsuru — ürəkdə dəliklər. <span class=\"medical\">(tibbi: 2 kiçik VSD, PFO)</span>",
+    "condition.huseyn":  "Anadangəlmə ürək qüsuru — ürəkdə dəlik. <span class=\"medical\">(tibbi: VSD ~9 mm, PFO, aberran bant)</span>",
 
     "gallery.title":     "Həsən-Hüseynin gözündən",
 
@@ -50,7 +50,7 @@ const I18N = {
 
     "condition.title":   "Tıbbi Durum",
     "condition.hasan":   "Doğuştan kalp kusuru — kalpte delik. <span class=\"medical\">(tıbbi: VSD ~9 mm, PFO, aberran bant)</span>",
-    "condition.huseyn":  "Doğuştan kalp kusuru — kalpte delikler. <span class=\"medical\">(tıbbi: 2 küçük VSD, PFO)</span>",
+    "condition.huseyn":  "Doğuştan kalp kusuru — kalpte delik. <span class=\"medical\">(tıbbi: VSD ~9 mm, PFO, aberran bant)</span>",
 
     "gallery.title":     "Həsən ve Hüseyn'in gözünden",
 
@@ -84,7 +84,7 @@ const I18N = {
 
     "condition.title":   "Медицинское состояние",
     "condition.hasan":   "Врождённый порок сердца — отверстие в сердце. <span class=\"medical\">(медицинский: ДМЖП ~9 мм, ООО, аберрантный пучок)</span>",
-    "condition.huseyn":  "Врождённый порок сердца — отверстия в сердце. <span class=\"medical\">(медицинский: 2 малых ДМЖП, ООО)</span>",
+    "condition.huseyn":  "Врождённый порок сердца — отверстие в сердце. <span class=\"medical\">(медицинский: ДМЖП ~9 мм, ООО, аберрантный пучок)</span>",
 
     "gallery.title":     "Глазами Хасана и Хусейна",
 
@@ -118,7 +118,7 @@ const I18N = {
 
     "condition.title":   "Medical Condition",
     "condition.hasan":   "Congenital heart defect — a hole in the heart. <span class=\"medical\">(medical: VSD ~9 mm, PFO, aberrant band)</span>",
-    "condition.huseyn":  "Congenital heart defect — holes in the heart. <span class=\"medical\">(medical: 2 small VSD, PFO)</span>",
+    "condition.huseyn":  "Congenital heart defect — a hole in the heart. <span class=\"medical\">(medical: VSD ~9 mm, PFO, aberrant band)</span>",
 
     "gallery.title":     "Through Həsən & Hüseyn's eyes",
 
