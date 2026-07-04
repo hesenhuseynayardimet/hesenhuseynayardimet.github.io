@@ -583,22 +583,6 @@ a.contact-tel:hover { color: var(--accent); }
 
 .btn-copy.copied svg { display: none; }
 
-/* Trust note sits at the bottom of the donation section.
-   Comfortable body-size text — must be readable, not fine print. */
-.trust-note {
-  max-width: 720px;
-  margin: 48px auto 0;
-  text-align: center;
-  font-size: 1.02rem;
-  line-height: 1.7;
-  color: var(--text-soft);
-}
-
-.trust-name {
-  color: var(--accent-dark);
-  font-weight: 700;
-}
-
 /* ============== FOOTER (just names + year) ============== */
 .site-footer {
   background: linear-gradient(180deg, #1f3a38 0%, #163230 100%);
@@ -805,8 +789,6 @@ a.contact-tel:hover { color: var(--accent); }
   .hero-hearts { width: 90px; margin-bottom: 22px; }
 
   .section { padding: 60px 0; }
-
-  .trust-note { font-size: 0.97rem; margin-top: 36px; }
 
   .bank-number { font-size: 1.05rem; letter-spacing: 1.5px; }
 

@@ -27,7 +27,6 @@ const I18N = {
     "donate.caption":    "Bütün kartlar ailənin adına qeydiyyatdadır.",
     "donate.copy":       "Kopyala",
     "donate.copied":     "Kopyalandı",
-    "donate.trust":      "Hər üç kart ailənin özünə — <strong class=\"trust-name\">Cəfərova Günəş Daşdəmir qızına</strong> aiddir və yalnız onun şəxsi nəzarətindədir. Bütün yardımlar birbaşa uşaqların müalicəsi üçün ailənin özünə çatır.",
 
     "contact.cardTitle":     "Ailə",
     "contact.father":        "Ata",
@@ -61,7 +60,6 @@ const I18N = {
     "donate.caption":    "Tüm kartlar ailenin adına kayıtlıdır.",
     "donate.copy":       "Kopyala",
     "donate.copied":     "Kopyalandı",
-    "donate.trust":      "Üç kartın tamamı ailenin kendisine — <strong class=\"trust-name\">Cəfərova Günəş Daşdəmir qızı'na</strong> aittir ve yalnızca onun kişisel kontrolündedir. Tüm yardımlar doğrudan çocukların tedavisi için ailenin kendisine ulaşır.",
 
     "contact.cardTitle":     "Aile",
     "contact.father":        "Baba",
@@ -95,7 +93,6 @@ const I18N = {
     "donate.caption":    "Все карты оформлены на семью.",
     "donate.copy":       "Копировать",
     "donate.copied":     "Скопировано",
-    "donate.trust":      "Все три карты принадлежат самой семье — <strong class=\"trust-name\">Джафаровой Гюнеш Дашдемир кызы</strong>, и находятся исключительно под её личным контролем. Все пожертвования напрямую поступают самой семье на лечение детей.",
 
     "contact.cardTitle":     "Семья",
     "contact.father":        "Отец",
@@ -129,7 +126,6 @@ const I18N = {
     "donate.caption":    "All cards are registered in the family's name.",
     "donate.copy":       "Copy",
     "donate.copied":     "Copied",
-    "donate.trust":      "All three cards belong to the family itself — <strong class=\"trust-name\">Jafarova Gunesh Dashdamir gizi</strong> — and are under her personal control only. All donations go directly to the family for the children's treatment.",
 
     "contact.cardTitle":     "Family",
     "contact.father":        "Father",
