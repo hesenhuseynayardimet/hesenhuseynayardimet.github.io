@@ -8,8 +8,9 @@ const I18N = {
   az: {
     "hero.title":        "İki balaca ürəyin döyünməsi sizin dəstəyinizdən asılıdır",
     "hero.names":        "Həsən və Hüseyn Cəfərov",
-    "hero.scroll":       "Aşağı sürüşdürün",
-    "fab.cards":         "Kartlara bax",
+    "hero.badge":        "Təcili yardım kampaniyası",
+    "cta.donate":        "Yardım et",
+    "cta.story":         "Hekayəni oxu",
 
     "story.title":       "Hekayələri",
     "story.body":        "Əkiz qardaşlar Həsən və Hüseyn ağır ürək qüsuru ilə mübarizə aparırlar. Onların ürəyində dəlik var və ciddi ürək ritm pozğunluğu (paroksizm) aşkarlanıb. Həkimlər bildirir ki, ürəyin fəaliyyətini qorumaq üçün təcili olaraq ürəyə xüsusi aparat yerləşdirilməlidir. Əks halda ürək hər an fəaliyyətini dayandıra bilər. Təəssüf ki, bu əməliyyatın Azərbaycanda mümkün müalicəsi yoxdur. Həkimlərin tövsiyəsi ilə uşaqların İsraildə əməliyyat olunması planlaşdırılır.",
@@ -41,8 +42,9 @@ const I18N = {
   tr: {
     "hero.title":        "İki küçük yüreğin atışı sizin desteğinize bağlı",
     "hero.names":        "Həsən ve Hüseyn Cəfərov",
-    "hero.scroll":       "Aşağı kaydırın",
-    "fab.cards":         "Kartlara bak",
+    "hero.badge":        "Acil yardım kampanyası",
+    "cta.donate":        "Yardım et",
+    "cta.story":         "Hikayeyi oku",
 
     "story.title":       "Hikayeleri",
     "story.body":        "İkiz kardeşler Həsən ve Hüseyn ağır kalp kusuru ile mücadele ediyorlar. Kalplerinde delik var ve ciddi kalp ritim bozukluğu (paroksizm) tespit edildi. Doktorlar belirtiyor ki, kalbin işlevini korumak için acilen kalbe özel bir cihaz yerleştirilmelidir. Aksi takdirde kalp her an çalışmayı durdurabilir. Maalesef bu ameliyatın Azerbaycan'da mümkün tedavisi yoktur. Doktorların tavsiyesi üzerine çocukların İsrail'de ameliyat olmaları planlanıyor.",
@@ -74,8 +76,9 @@ const I18N = {
   ru: {
     "hero.title":        "Биение двух маленьких сердец зависит от вашей поддержки",
     "hero.names":        "Хасан и Хусейн Джафаровы",
-    "hero.scroll":       "Прокрутите вниз",
-    "fab.cards":         "Посмотреть карты",
+    "hero.badge":        "Срочная кампания помощи",
+    "cta.donate":        "Помочь",
+    "cta.story":         "Читать историю",
 
     "story.title":       "Их история",
     "story.body":        "Братья-близнецы Хасан и Хусейн борются с тяжёлым пороком сердца. У них в сердце имеется отверстие, и выявлено серьёзное нарушение сердечного ритма (пароксизм). Врачи сообщают, что для сохранения работы сердца необходимо срочно установить специальный аппарат. В противном случае сердце может остановиться в любой момент. К сожалению, данная операция недоступна в Азербайджане. По рекомендации врачей планируется проведение операции в Израиле.",
@@ -107,8 +110,9 @@ const I18N = {
   en: {
     "hero.title":        "The beating of two little hearts depends on your support",
     "hero.names":        "Hasan and Huseyn Jafarov",
-    "hero.scroll":       "Scroll down",
-    "fab.cards":         "View bank cards",
+    "hero.badge":        "Urgent fundraising campaign",
+    "cta.donate":        "Donate",
+    "cta.story":         "Read their story",
 
     "story.title":       "Their Story",
     "story.body":        "Twin brothers Hasan and Huseyn are battling a severe heart defect. They have a hole in their hearts, and a serious heart rhythm disorder (paroxysm) has been detected. Doctors say that a special device must urgently be implanted in the heart to preserve its function. Otherwise, the heart could stop at any moment. Unfortunately, this surgery is not available in Azerbaijan. On the doctors' recommendation, the surgery is planned to be carried out in Israel.",
@@ -317,16 +321,38 @@ function initCopyButtons() {
   });
 }
 
-// ---------- FLOATING "VIEW CARDS" BUTTON ----------
-// Click smooth-scrolls to the donation section and centers it in the viewport.
+// ---------- STICKY DONATE BAR ----------
+// Button scrolls to the donation section; the bar itself appears only after
+// the hero is scrolled out of view, and hides while the donate section shows.
 function initCardsFab() {
   const fab = document.getElementById("cardsFab");
-  if (!fab) return;
+  const bar = document.getElementById("donateBar");
+  if (!fab || !bar) return;
+
   fab.addEventListener("click", () => {
     const target = document.getElementById("donate");
     if (!target) return;
     target.scrollIntoView({ behavior: "smooth", block: "center" });
   });
+
+  const hero = document.getElementById("hero");
+  const donate = document.getElementById("donate");
+  let heroVisible = true;
+  let donateVisible = false;
+
+  const update = () =>
+    bar.classList.toggle("visible", !heroVisible && !donateVisible);
+
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.target === hero) heroVisible = e.isIntersecting;
+      if (e.target === donate) donateVisible = e.isIntersecting;
+    });
+    update();
+  }, { threshold: 0.15 });
+
+  if (hero) obs.observe(hero);
+  if (donate) obs.observe(donate);
 }
 
 // ---------- SCROLL ANIMATIONS ----------
