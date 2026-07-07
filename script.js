@@ -11,6 +11,8 @@ const I18N = {
     "hero.badge":        "Təcili yardım kampaniyası",
     "cta.donate":        "Yardım et",
     "cta.story":         "Hekayəni oxu",
+    "cta.cards":         "Kartlara bax",
+    "cta.docs":          "Sənədlərə bax",
 
     "story.title":       "Hekayələri",
     "story.body":        "Əkiz qardaşlar Həsən və Hüseyn ağır ürək qüsuru ilə mübarizə aparırlar. Onların ürəyində dəlik var və ciddi ürək ritm pozğunluğu (paroksizm) aşkarlanıb. Həkimlər bildirir ki, ürəyin fəaliyyətini qorumaq üçün təcili olaraq ürəyə xüsusi aparat yerləşdirilməlidir. Əks halda ürək hər an fəaliyyətini dayandıra bilər. Təəssüf ki, bu əməliyyatın Azərbaycanda mümkün müalicəsi yoxdur. Həkimlərin tövsiyəsi ilə uşaqların İsraildə əməliyyat olunması planlaşdırılır.",
@@ -45,6 +47,8 @@ const I18N = {
     "hero.badge":        "Acil yardım kampanyası",
     "cta.donate":        "Yardım et",
     "cta.story":         "Hikayeyi oku",
+    "cta.cards":         "Kartlara bak",
+    "cta.docs":          "Belgelere bak",
 
     "story.title":       "Hikayeleri",
     "story.body":        "İkiz kardeşler Həsən ve Hüseyn ağır kalp kusuru ile mücadele ediyorlar. Kalplerinde delik var ve ciddi kalp ritim bozukluğu (paroksizm) tespit edildi. Doktorlar belirtiyor ki, kalbin işlevini korumak için acilen kalbe özel bir cihaz yerleştirilmelidir. Aksi takdirde kalp her an çalışmayı durdurabilir. Maalesef bu ameliyatın Azerbaycan'da mümkün tedavisi yoktur. Doktorların tavsiyesi üzerine çocukların İsrail'de ameliyat olmaları planlanıyor.",
@@ -79,6 +83,8 @@ const I18N = {
     "hero.badge":        "Срочная кампания помощи",
     "cta.donate":        "Помочь",
     "cta.story":         "Читать историю",
+    "cta.cards":         "Посмотреть карты",
+    "cta.docs":          "Посмотреть документы",
 
     "story.title":       "Их история",
     "story.body":        "Братья-близнецы Хасан и Хусейн борются с тяжёлым пороком сердца. У них в сердце имеется отверстие, и выявлено серьёзное нарушение сердечного ритма (пароксизм). Врачи сообщают, что для сохранения работы сердца необходимо срочно установить специальный аппарат. В противном случае сердце может остановиться в любой момент. К сожалению, данная операция недоступна в Азербайджане. По рекомендации врачей планируется проведение операции в Израиле.",
@@ -113,6 +119,8 @@ const I18N = {
     "hero.badge":        "Urgent fundraising campaign",
     "cta.donate":        "Donate",
     "cta.story":         "Read their story",
+    "cta.cards":         "View cards",
+    "cta.docs":          "View documents",
 
     "story.title":       "Their Story",
     "story.body":        "Twin brothers Hasan and Huseyn are battling a severe heart defect. They have a hole in their hearts, and a serious heart rhythm disorder (paroxysm) has been detected. Doctors say that a special device must urgently be implanted in the heart to preserve its function. Otherwise, the heart could stop at any moment. Unfortunately, this surgery is not available in Azerbaijan. On the doctors' recommendation, the surgery is planned to be carried out in Israel.",
