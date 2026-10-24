@@ -12,6 +12,7 @@ const I18N = {
     "cta.donate":        "Yardım et",
     "cta.story":         "Hekayəni oxu",
     "cta.cards":         "Kartlara bax",
+    "cta.whatsapp":      "WhatsApp ilə əlaqə",
     "cta.docs":          "Sənədlərə bax",
 
     "story.title":       "Hekayələri",
@@ -48,6 +49,7 @@ const I18N = {
     "cta.donate":        "Yardım et",
     "cta.story":         "Hikayeyi oku",
     "cta.cards":         "Kartlara bak",
+    "cta.whatsapp":      "WhatsApp ile iletişim",
     "cta.docs":          "Belgelere bak",
 
     "story.title":       "Hikayeleri",
@@ -84,6 +86,7 @@ const I18N = {
     "cta.donate":        "Помочь",
     "cta.story":         "Читать историю",
     "cta.cards":         "Посмотреть карты",
+    "cta.whatsapp":      "Написать в WhatsApp",
     "cta.docs":          "Посмотреть документы",
 
     "story.title":       "Их история",
@@ -120,6 +123,7 @@ const I18N = {
     "cta.donate":        "Donate",
     "cta.story":         "Read their story",
     "cta.cards":         "View cards",
+    "cta.whatsapp":      "Contact on WhatsApp",
     "cta.docs":          "View documents",
 
     "story.title":       "Their Story",

@@ -103,6 +103,20 @@ h1, h2, h3 {
 
 .btn-ghost:hover { border-color: #fff; background: rgba(255, 255, 255, 0.1); }
 
+/* WhatsApp contact: white pill with the brand-green mark */
+.btn-whatsapp {
+  background: #fff;
+  color: var(--ink);
+}
+
+.btn-whatsapp:hover { background: #eef1f5; }
+
+.btn-whatsapp svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--wa-green);
+}
+
 /* ============== HEADER ============== */
 .site-header {
   position: sticky;
