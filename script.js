@@ -190,13 +190,30 @@ function initLangSwitcher() {
 const PHOTOS = Array.from({ length: 9 }, (_, i) => `images/photo-${i + 1}.jpg`);
 const DOCS   = Array.from({ length: 5 }, (_, i) => `images/doc-${i + 1}.jpg`);
 
+// Fixed album tilts (degrees) so the layout is the same on every visit.
+const TILTS = [-1.6, 1.2, -0.6, 1.5, -1.1, 0.7, -1.4, 0.9, -0.4];
+
+// Make a clickable tile reachable and openable from the keyboard too.
+function makeOpenable(el, open) {
+  el.tabIndex = 0;
+  el.setAttribute("role", "button");
+  el.addEventListener("click", open);
+  el.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      open();
+    }
+  });
+}
+
 function buildGallery() {
   const grid = document.getElementById("galleryGrid");
   PHOTOS.forEach((src, idx) => {
     const div = document.createElement("div");
-    div.className = "gallery-item fade-in";
+    div.className = "gallery-item";
+    div.style.setProperty("--tilt", `${TILTS[idx % TILTS.length]}deg`);
     div.innerHTML = `<img src="${src}" alt="Həsən və Hüseyn — foto ${idx + 1}" loading="lazy" />`;
-    div.addEventListener("click", () => openLightbox(PHOTOS, idx));
+    makeOpenable(div, () => openLightbox(PHOTOS, idx));
     grid.appendChild(div);
   });
 }
@@ -205,9 +222,9 @@ function buildDocs() {
   const grid = document.getElementById("docsGrid");
   DOCS.forEach((src, idx) => {
     const div = document.createElement("div");
-    div.className = "doc-item fade-in";
+    div.className = "doc-item";
     div.innerHTML = `<img src="${src}" alt="Sənəd ${idx + 1}" loading="lazy" />`;
-    div.addEventListener("click", () => openLightbox(DOCS, idx));
+    makeOpenable(div, () => openLightbox(DOCS, idx));
     grid.appendChild(div);
   });
 }
@@ -363,31 +380,8 @@ function initCardsFab() {
   if (donate) obs.observe(donate);
 }
 
-// ---------- SCROLL ANIMATIONS ----------
-function initScrollAnimations() {
-  // Mark anything that should fade-in
-  document.querySelectorAll(
-    ".hero-title, .hero-names, " +
-    ".story-text, .condition-card, .bank-card, " +
-    ".section-title, .section-caption"
-  ).forEach((el) => el.classList.add("fade-in"));
-
-  const obs = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          obs.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
-  );
-
-  document.querySelectorAll(".fade-in").forEach((el) => obs.observe(el));
-}
-
 // ---------- INIT ----------
+// The only entrance motion is the hero headline, handled in CSS.
 document.addEventListener("DOMContentLoaded", () => {
   buildGallery();
   buildDocs();
@@ -396,5 +390,4 @@ document.addEventListener("DOMContentLoaded", () => {
   initCopyButtons();
   initCardsFab();
   applyLang(getStoredLang());
-  initScrollAnimations();
 });

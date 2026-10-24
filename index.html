@@ -6,18 +6,18 @@
   <meta name="description" content="Əkiz qardaşlar Həsən və Hüseyn Cəfərovun ürək əməliyyatı üçün yardım kampaniyası." />
   <title>Həsən & Hüseyn — Yardım Kampaniyası</title>
 
-  <!-- Favicon: small heart -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23e85a6b' d='M16 28s-11-7.2-11-15.2C5 8.6 8.1 6 11.6 6c2.1 0 4 1.1 4.4 2.7C16.5 7.1 18.3 6 20.4 6 23.9 6 27 8.6 27 12.8 27 20.8 16 28 16 28z'/%3E%3C/svg%3E" />
+  <!-- Favicon: two twin bars on night blue -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2316233B'/%3E%3Crect x='9' y='8' width='4.5' height='16' rx='2.25' fill='%23E2A33A'/%3E%3Crect x='18.5' y='8' width='4.5' height='16' rx='2.25' fill='%23E2A33A'/%3E%3C/svg%3E" />
 
   <!-- Preload hero image so the full-bleed background paints immediately -->
   <link rel="preload" as="image" href="images/photo-10.jpg" fetchpriority="high" />
 
-  <!-- Google Fonts: Lora (serif) + IBM Plex Sans -->
+  <!-- Google Fonts: Literata (headings) + Onest (body); both cover ə and Cyrillic -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,600&family=Onest:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="style.css?v=11" />
+  <link rel="stylesheet" href="style.css?v=12" />
 
   <!-- TikTok Pixel Code Start -->
   <script>
@@ -52,14 +52,11 @@
 </head>
 <body>
 
-  <!-- ============== HEADER (transparent, floats over hero) ============== -->
+  <!-- ============== HEADER ============== -->
   <header class="site-header" id="siteHeader">
     <div class="container header-inner">
       <a href="#hero" class="brand" aria-label="Həsən və Hüseyn">
-        <svg class="brand-hearts" viewBox="0 0 48 28" aria-hidden="true">
-          <path d="M12 26s-10-6.5-10-14C2 7.5 5 5 8.2 5c2 0 3.6 1 4 2.5C12.6 6 14.2 5 16.2 5 19.4 5 22 7.5 22 12 22 19.5 12 26 12 26z"/>
-          <path d="M36 26s-10-6.5-10-14C26 7.5 29 5 32.2 5c2 0 3.6 1 4 2.5C36.6 6 38.2 5 40.2 5 43.4 5 46 7.5 46 12 46 19.5 36 26 36 26z"/>
-        </svg>
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i></span>
         <span class="brand-text">Həsən &amp; Hüseyn</span>
       </a>
 
@@ -95,9 +92,6 @@
     <div class="container story-grid">
       <div class="story-photo">
         <img src="images/photo-1.jpg" alt="Həsən və Hüseyn" loading="lazy" />
-        <div class="story-photo-heart" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M12 21s-9-6-9-12.5C3 4.4 6.1 2 9 2c1.7 0 3.2.9 3.7 2.2.5-1.3 2-2.2 3.7-2.2 2.9 0 6 2.4 6 6.5C22.4 15 13.5 21 12 21z"/></svg>
-        </div>
       </div>
       <div class="story-content">
         <h2 class="section-title" data-i18n="story.title">Hekayələri</h2>
@@ -116,7 +110,7 @@
   </section>
 
   <!-- ============== DONATE (moved up, right after story) ============== -->
-  <section id="donate" class="section section-donate">
+  <section id="donate" class="section section-sky">
     <div class="container">
       <h2 class="section-title" data-i18n="donate.title">Yardım Etmək Üçün</h2>
       <p class="section-caption" data-i18n="donate.caption">
@@ -181,12 +175,7 @@
 
       <div class="condition-grid">
         <article class="condition-card">
-          <div class="condition-card-header">
-            <svg class="card-heart" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 21s-9-6-9-12.5C3 4.4 6.1 2 9 2c1.7 0 3.2.9 3.7 2.2.5-1.3 2-2.2 3.7-2.2 2.9 0 6 2.4 6 6.5C22.4 15 13.5 21 12 21z"/>
-            </svg>
-            <h3>Həsən</h3>
-          </div>
+          <h3>Həsən</h3>
           <p data-i18n="condition.hasan">
             Anadangəlmə ürək qüsuru — ürəkdə dəlik
             <span class="medical">(tibbi: VSD ~9 mm, PFO, aberran bant).</span>
@@ -194,12 +183,7 @@
         </article>
 
         <article class="condition-card">
-          <div class="condition-card-header">
-            <svg class="card-heart" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 21s-9-6-9-12.5C3 4.4 6.1 2 9 2c1.7 0 3.2.9 3.7 2.2.5-1.3 2-2.2 3.7-2.2 2.9 0 6 2.4 6 6.5C22.4 15 13.5 21 12 21z"/>
-            </svg>
-            <h3>Hüseyn</h3>
-          </div>
+          <h3>Hüseyn</h3>
           <p data-i18n="condition.huseyn">
             Anadangəlmə ürək qüsuru — ürəkdə dəlik
             <span class="medical">(tibbi: VSD ~9 mm, PFO, aberran bant).</span>
@@ -207,12 +191,7 @@
         </article>
 
         <article class="condition-card contact-card">
-          <div class="condition-card-header">
-            <svg class="card-heart" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 21s-9-6-9-12.5C3 4.4 6.1 2 9 2c1.7 0 3.2.9 3.7 2.2.5-1.3 2-2.2 3.7-2.2 2.9 0 6 2.4 6 6.5C22.4 15 13.5 21 12 21z"/>
-            </svg>
-            <h3 data-i18n="contact.cardTitle">Ailə</h3>
-          </div>
+          <h3 data-i18n="contact.cardTitle">Ailə</h3>
           <ul class="contact-info">
             <li>
               <span class="contact-info-label" data-i18n="contact.father">Ata</span>
@@ -233,7 +212,7 @@
   </section>
 
   <!-- ============== GALLERY ============== -->
-  <section id="gallery" class="section section-warm">
+  <section id="gallery" class="section">
     <div class="container">
       <h2 class="section-title" data-i18n="gallery.title">Foto Qalereya</h2>
 
@@ -244,7 +223,7 @@
   </section>
 
   <!-- ============== DOCUMENTS ============== -->
-  <section id="documents" class="section">
+  <section id="documents" class="section section-sky">
     <div class="container">
       <h2 class="section-title" data-i18n="docs.title">Rəsmi Sənədlər</h2>
       <p class="section-caption" data-i18n="docs.caption">
@@ -271,7 +250,6 @@
       <span data-i18n="hero.badge">Təcili yardım kampaniyası</span>
     </div>
     <button type="button" class="btn btn-primary donate-bar-btn" id="cardsFab">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-9-6-9-12.5C3 4.4 6.1 2 9 2c1.7 0 3.2.9 3.7 2.2.5-1.3 2-2.2 3.7-2.2 2.9 0 6 2.4 6 6.5C22.4 15 13.5 21 12 21z"/></svg>
       <span data-i18n="cta.cards">Kartlara bax</span>
     </button>
   </div>
@@ -295,6 +273,6 @@
     <button class="lightbox-nav lightbox-next" type="button" id="lightboxNext" aria-label="Next">&#8250;</button>
   </div>
 
-  <script src="script.js?v=11"></script>
+  <script src="script.js?v=12"></script>
 </body>
 </html>
