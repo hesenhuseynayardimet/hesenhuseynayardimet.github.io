@@ -205,8 +205,9 @@ h1, h2, h3 {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
   gap: 56px;
-  align-items: center;
-  padding-block: clamp(40px, 7vh, 80px);
+  align-items: start;
+  /* Tight top so the badge sits right under the header */
+  padding-block: 28px clamp(40px, 7vh, 80px);
 }
 
 .hero-photo {
@@ -686,7 +687,7 @@ a.contact-tel:hover { text-decoration: underline; }
 
 /* ============== RESPONSIVE ============== */
 @media (max-width: 900px) {
-  .hero-layout { grid-template-columns: 1fr; gap: 32px; }
+  .hero-layout { grid-template-columns: 1fr; gap: 32px; padding-top: 20px; }
   .hero-photo img { max-height: none; }
   .story-grid { grid-template-columns: 1fr; gap: 40px; }
   .story-photo { max-width: 420px; }
