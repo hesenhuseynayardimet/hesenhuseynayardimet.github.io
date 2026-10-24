@@ -339,81 +339,143 @@ h1, h2, h3 {
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  gap: 20px;
+  gap: 28px 24px;
 }
 
+/* Each block: a realistic card face with its own copy button beneath */
 .bank-card {
   display: flex;
   flex-direction: column;
-  padding: 26px 24px 22px;
-  background: var(--ink);
-  color: #fff;
-  border-radius: var(--radius);
+  gap: 14px;
 }
 
-.bank-card-top {
+/* Shade per bank so the three cards are told apart at a glance */
+.bank-card--kapital { --face: linear-gradient(135deg, #24406f 0%, #16233b 62%); }
+.bank-card--abb     { --face: linear-gradient(135deg, #1d5361 0%, #132a3b 62%); }
+.bank-card--leo     { --face: linear-gradient(135deg, #43336a 0%, #1b2040 62%); }
+
+.bank-face {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  aspect-ratio: 1.586; /* real bank-card proportions */
+  container-type: inline-size;
+  padding: 20px 22px 18px;
+  overflow: hidden;
+  color: #fff;
+  background: var(--face, var(--ink));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  box-shadow: 0 22px 40px -22px rgba(22, 35, 59, 0.75), 0 2px 6px rgba(22, 35, 59, 0.18);
+  transition: box-shadow 0.25s var(--ease);
+}
+
+/* Soft sheen across the top-right corner */
+.bank-face::before {
+  content: "";
+  position: absolute;
+  top: -45%;
+  right: -25%;
+  width: 80%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.16), transparent 65%);
+  pointer-events: none;
+}
+
+/* Green ring on the face once its number has been copied */
+.bank-card:has(.btn-copy.copied) .bank-face {
+  box-shadow: 0 0 0 3px var(--success), 0 22px 40px -22px rgba(22, 35, 59, 0.75);
+}
+
+.bank-face-top,
+.bank-face-bottom {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 36px;
+  gap: 12px;
 }
 
 .bank-name {
   font-family: var(--serif);
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.bank-nfc {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.75);
+  stroke-width: 1.8;
+  stroke-linecap: round;
 }
 
 .bank-chip {
   position: relative;
-  width: 38px;
-  height: 28px;
-  background: var(--saffron);
-  border-radius: 6px;
+  width: 46px;
+  height: 34px;
+  border-radius: 7px;
+  background: linear-gradient(135deg, #f3c86e 0%, var(--saffron) 55%, #c98a22 100%);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
 }
 
+/* Contact lines on the chip */
+.bank-chip::before,
 .bank-chip::after {
   content: "";
   position: absolute;
-  inset: 6px;
-  border: 1px solid rgba(22, 35, 59, 0.35);
-  border-radius: 3px;
+  border: 1px solid rgba(22, 35, 59, 0.3);
 }
 
+.bank-chip::before { inset: 8px 14px; border-radius: 3px; }
+.bank-chip::after  { left: 0; right: 0; top: 50%; border-width: 1px 0 0; }
+
 .bank-number {
-  font-size: 1.35rem;
+  position: relative;
+  /* Sized to the card's own width so 16 digits always fit on one line */
+  font-size: clamp(1.05rem, 6.3cqi, 1.6rem);
   font-weight: 500;
   font-variant-numeric: tabular-nums;
-  letter-spacing: 0.06em;
-  margin-bottom: 6px;
+  letter-spacing: 0.07em;
   white-space: nowrap;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
 
 /* Cardholder line — matches what donors see at their bank */
 .bank-holder {
   font-size: 0.92rem;
-  color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 22px;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.82);
 }
 
+.bank-network {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Copy button follows the site's button system */
 .btn-copy {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   width: 100%;
-  min-height: 48px;
-  margin-top: auto;
+  min-height: 50px;
   padding: 12px 20px;
   background: var(--saffron);
   color: var(--ink);
-  border-radius: var(--radius-sm);
+  border-radius: 999px;
   font-size: 1rem;
   font-weight: 600;
-  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 10px 20px -12px rgba(22, 35, 59, 0.6);
+  transition: background 0.2s, color 0.2s, transform 0.2s var(--ease);
 }
 
-.btn-copy:hover { background: var(--saffron-hover); }
+.btn-copy:hover { background: var(--saffron-hover); transform: translateY(-1px); }
 
 .btn-copy svg {
   width: 18px;
@@ -421,7 +483,8 @@ h1, h2, h3 {
   fill: currentColor;
 }
 
-.btn-copy.copied {
+.btn-copy.copied,
+.btn-copy.copied:hover {
   background: var(--success);
   color: #fff;
 }
@@ -730,7 +793,6 @@ a.contact-tel:hover { text-decoration: underline; }
 
   .docs-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
 
-  .bank-number { font-size: 1.2rem; }
 
   .donate-bar { padding-inline: 16px; }
   .donate-bar-text strong { font-size: 0.95rem; }
@@ -753,6 +815,6 @@ a.contact-tel:hover { text-decoration: underline; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .hero-title, .hero-names, .hero-actions, .hero-photo, .lightbox.open { animation: none; }
-  .gallery-item, .doc-item, .donate-bar, .whatsapp-fab, .btn { transition: none; }
-  .btn:hover { transform: none; }
+  .gallery-item, .doc-item, .donate-bar, .whatsapp-fab, .btn, .btn-copy, .bank-face { transition: none; }
+  .btn:hover, .btn-copy:hover { transform: none; }
 }
