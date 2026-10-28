@@ -210,6 +210,29 @@ h1, h2, h3 {
   padding-block: 28px clamp(40px, 7vh, 80px);
 }
 
+/* Paid days left: a neutral billing chip, not part of the campaign */
+.hero-layout { position: relative; }
+
+.paid-chip {
+  position: absolute;
+  top: 28px;
+  right: 24px;
+  z-index: 1;
+  min-width: 34px;
+  padding: 5px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 6px 16px -6px rgba(0, 0, 0, 0.45);
+  color: var(--text-soft);
+  font: 600 0.85rem/1.2 var(--sans);
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+
+.paid-chip[hidden] { display: none; }
+.paid-chip.is-soon { color: #b8432f; }
+
 .hero-photo {
   justify-self: center;
   width: fit-content;
@@ -751,6 +774,7 @@ a.contact-tel:hover { text-decoration: underline; }
 /* ============== RESPONSIVE ============== */
 @media (max-width: 900px) {
   .hero-layout { grid-template-columns: 1fr; gap: 32px; padding-top: 20px; }
+  .paid-chip { top: 20px; }
   .hero-photo img { max-height: none; }
   .story-grid { grid-template-columns: 1fr; gap: 40px; }
   .story-photo { max-width: 420px; }
@@ -762,6 +786,7 @@ a.contact-tel:hover { text-decoration: underline; }
   :root { --header-h: 50px; }
   body { font-size: 16px; }
   .container { padding-inline: 16px; }
+  .paid-chip { right: 16px; }
 
   .brand { font-size: 1rem; }
   .lang-btn { min-width: 34px; padding: 5px 6px; font-size: 0.8rem; }

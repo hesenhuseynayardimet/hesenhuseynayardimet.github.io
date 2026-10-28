@@ -39,7 +39,10 @@ const I18N = {
     "contact.addressValue":  "Sumqayıt şəhəri, 6-cı mikrorayon, Bina 35K, Mənzil 73 (kirayə)",
     "contact.phone":         "Telefon",
 
-    "footer.note":       "© 2026 Həsən və Hüseyn Cəfərov"
+    "footer.note":       "© 2026 Həsən və Hüseyn Cəfərov",
+
+    "paid.daysLeft":     "{n} gün qalıb",
+    "paid.lastDay":      "Son gün"
   },
 
   tr: {
@@ -76,7 +79,10 @@ const I18N = {
     "contact.addressValue":  "Sumqayıt şehri, 6. mikrorayon, Bina 35K, Daire 73 (kira)",
     "contact.phone":         "Telefon",
 
-    "footer.note":       "© 2026 Həsən ve Hüseyn Cəfərov"
+    "footer.note":       "© 2026 Həsən ve Hüseyn Cəfərov",
+
+    "paid.daysLeft":     "{n} gün kaldı",
+    "paid.lastDay":      "Son gün"
   },
 
   ru: {
@@ -113,7 +119,10 @@ const I18N = {
     "contact.addressValue":  "г. Сумгаит, 6-й микрорайон, дом 35К, квартира 73 (съёмная)",
     "contact.phone":         "Телефон",
 
-    "footer.note":       "© 2026 Хасан и Хусейн Джафаровы"
+    "footer.note":       "© 2026 Хасан и Хусейн Джафаровы",
+
+    "paid.daysLeft":     "Осталось дней: {n}",
+    "paid.lastDay":      "Последний день"
   },
 
   en: {
@@ -150,7 +159,10 @@ const I18N = {
     "contact.addressValue":  "Sumgayit city, 6th microdistrict, Building 35K, Apartment 73 (rented)",
     "contact.phone":         "Phone",
 
-    "footer.note":       "© 2026 Hasan and Huseyn Jafarov"
+    "footer.note":       "© 2026 Hasan and Huseyn Jafarov",
+
+    "paid.daysLeft":     "{n} days left",
+    "paid.lastDay":      "Last day"
   }
 };
 
@@ -178,6 +190,8 @@ function applyLang(lang) {
     }
   });
 
+  renderPaidChip(dict);
+
   // Toggle active state on language buttons
   document.querySelectorAll(".lang-btn").forEach((btn) => {
     btn.classList.toggle("active", btn.dataset.lang === lang);
@@ -188,6 +202,23 @@ function initLangSwitcher() {
   document.querySelectorAll(".lang-btn").forEach((btn) => {
     btn.addEventListener("click", () => applyLang(btn.dataset.lang));
   });
+}
+
+// ---------- PAID DAYS LEFT ----------
+// Neutral billing marker in the hero corner; PAID_UNTIL is set by the gate in <head>.
+function renderPaidChip(dict) {
+  const chip = document.getElementById("paidChip");
+  if (!chip || !(window.PAID_UNTIL instanceof Date)) return;
+
+  const days = Math.ceil((window.PAID_UNTIL - Date.now()) / 86400000);
+  if (days <= 0) { chip.hidden = true; return; }
+
+  const label = days === 1 ? dict["paid.lastDay"] : dict["paid.daysLeft"].replace("{n}", days);
+  chip.textContent = days;
+  chip.setAttribute("aria-label", label);
+  chip.title = label;
+  chip.classList.toggle("is-soon", days <= 3);
+  chip.hidden = false;
 }
 
 // ---------- GALLERY & DOCS INJECTION ----------

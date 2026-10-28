@@ -2,6 +2,44 @@
 <html lang="az">
 <head>
   <meta charset="UTF-8" />
+  <!-- Paid-until lock: runs before anything else is fetched -->
+  <script>
+  (function () {
+    // Change this date to extend. The site stays up until the end of that day, Baku time.
+    const PAID_UNTIL = new Date("2026-11-17T23:59:59+04:00");
+
+    if (Date.now() <= PAID_UNTIL.getTime()) {
+      window.PAID_UNTIL = PAID_UNTIL;
+      return;
+    }
+
+    const MSG = {
+      az: "Sayt müvəqqəti olaraq əlçatan deyil.",
+      tr: "Site geçici olarak erişilemiyor.",
+      ru: "Сайт временно недоступен.",
+      en: "This site is temporarily unavailable."
+    };
+    let lang = "az";
+    try { if (MSG[localStorage.getItem("lang")]) lang = localStorage.getItem("lang"); } catch (e) {}
+
+    const html =
+      '<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">' +
+      '<meta name="robots" content="noindex"><title>' + MSG[lang] + '</title>' +
+      '<style>body{margin:0;min-height:100vh;box-sizing:border-box;padding:24px;display:flex;' +
+      'align-items:center;justify-content:center;text-align:center;background:#f6f5f1;color:#16233b;' +
+      'font:500 1.15rem/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}</style></head>' +
+      '<body><p>' + MSG[lang] + '</p></body>';
+
+    function render() {
+      document.documentElement.lang = lang;
+      document.documentElement.innerHTML = html;
+    }
+    try { window.stop(); } catch (e) {}
+    render();
+    // If the parser could not be aborted, wipe whatever it appended after us.
+    document.addEventListener("DOMContentLoaded", render);
+  })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Əkiz qardaşlar Həsən və Hüseyn Cəfərovun ürək əməliyyatı üçün yardım kampaniyası." />
   <title>Həsən & Hüseyn — Yardım Kampaniyası</title>
@@ -17,7 +55,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,600&family=Onest:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="style.css?v=17" />
+  <link rel="stylesheet" href="style.css?v=18" />
 
   <!-- TikTok Pixel Code Start -->
   <script>
@@ -72,6 +110,8 @@
   <!-- ============== HERO: text + photo side by side ============== -->
   <section id="hero" class="hero">
     <div class="container hero-layout">
+      <!-- Paid days left (billing marker, filled by script.js from PAID_UNTIL) -->
+      <span class="paid-chip" id="paidChip" role="img" hidden></span>
       <div class="hero-inner">
         <span class="hero-badge" data-i18n="hero.badge">Təcili yardım kampaniyası</span>
         <h1 class="hero-title" data-i18n="hero.title">
@@ -314,6 +354,6 @@
     <button class="lightbox-nav lightbox-next" type="button" id="lightboxNext" aria-label="Next">&#8250;</button>
   </div>
 
-  <script src="script.js?v=15"></script>
+  <script src="script.js?v=16"></script>
 </body>
 </html>
