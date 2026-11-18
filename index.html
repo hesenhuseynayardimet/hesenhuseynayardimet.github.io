@@ -53,9 +53,9 @@
   <!-- Google Fonts: Literata (headings) + Onest (body); both cover ə and Cyrillic -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,600&family=Onest:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Literata:opsz,wght@7..72,500;7..72,600&family=Onest:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="style.css?v=18" />
+  <link rel="stylesheet" href="style.css?v=26" />
 
   <!-- TikTok Pixel Code Start -->
   <script>
@@ -94,7 +94,7 @@
   <header class="site-header" id="siteHeader">
     <div class="container header-inner">
       <a href="#hero" class="brand" aria-label="Həsən və Hüseyn">
-        <span class="brand-mark" aria-hidden="true"><i></i><i></i></span>
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></span>
         <span class="brand-text">Həsən &amp; Hüseyn</span>
       </a>
 
@@ -108,12 +108,13 @@
   </header>
 
   <!-- ============== HERO: text + photo side by side ============== -->
-  <section id="hero" class="hero">
+  <section id="hero" class="hero hero-v2">
+    <div class="hero-aurora" aria-hidden="true"><i class="a1"></i><i class="a2"></i><i class="a3"></i></div>
+    <div class="hero-orb" aria-hidden="true"><i></i><i></i><i></i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
     <div class="container hero-layout">
       <!-- Paid days left (billing marker, filled by script.js from PAID_UNTIL) -->
       <span class="paid-chip" id="paidChip" role="img" hidden></span>
       <div class="hero-inner">
-        <span class="hero-badge" data-i18n="hero.badge">Təcili yardım kampaniyası</span>
         <h1 class="hero-title" data-i18n="hero.title">
           İki balaca ürəyin döyünməsi sizin dəstəyinizdən asılıdır
         </h1>
@@ -121,7 +122,7 @@
 
         <div class="hero-actions">
           <a href="#donate" class="btn btn-primary">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
             <span data-i18n="cta.cards">Kartlara bax</span>
           </a>
           <a href="https://wa.me/994505567143" class="btn btn-whatsapp" target="_blank" rel="noopener">
@@ -138,11 +139,6 @@
           </a>
         </div>
       </div>
-
-      <!-- Shown whole and uncovered: the family, the children and the portraits on the wall -->
-      <figure class="hero-photo">
-        <img src="images/photo-10.jpg" alt="Həsən və Hüseyn ailəsi ilə" width="1200" height="1305" fetchpriority="high" />
-      </figure>
     </div>
   </section>
 
@@ -151,6 +147,7 @@
     <div class="container story-grid">
       <div class="story-photo">
         <img src="images/photo-1.jpg" alt="Həsən və Hüseyn" loading="lazy" />
+        <span class="story-tag" data-i18n="hero.names">Həsən və Hüseyn Cəfərov</span>
       </div>
       <div class="story-content">
         <h2 class="section-title" data-i18n="story.title">Hekayələri</h2>
@@ -172,7 +169,7 @@
   </section>
 
   <!-- ============== DONATE (moved up, right after story) ============== -->
-  <section id="donate" class="section section-sky">
+  <section id="donate" class="section section-sky donate-v2">
     <div class="container">
       <h2 class="section-title" data-i18n="donate.title">Yardım Etmək Üçün</h2>
       <p class="section-caption" data-i18n="donate.caption">
@@ -325,12 +322,8 @@
 
   <!-- ============== STICKY DONATE BAR ============== -->
   <div class="donate-bar" id="donateBar">
-    <div class="donate-bar-text">
-      <strong data-i18n="hero.names">Həsən və Hüseyn Cəfərov</strong>
-      <span data-i18n="hero.badge">Təcili yardım kampaniyası</span>
-    </div>
-    <button type="button" class="btn btn-primary donate-bar-btn" id="cardsFab">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
+    <button type="button" class="donate-pill" id="cardsFab">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
       <span data-i18n="cta.cards">Kartlara bax</span>
     </button>
   </div>
