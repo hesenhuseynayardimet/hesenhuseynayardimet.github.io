@@ -1447,3 +1447,38 @@ a.contact-tel:hover { text-decoration: underline; }
   .hero-v2 .hero-actions .btn-primary,
   .hero-v2 .hero-actions .btn-whatsapp { grid-column: 1 / -1; }
 }
+
+
+/* ============== HERO PHOTO (restored): shown whole beside the text ============== */
+.hero-v2 .hero-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.25rem;
+  align-items: center;
+}
+.hero-v2 .hero-orb { display: none; }
+.hero-v2 .hero-photo {
+  justify-self: center;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0;
+  padding: 8px;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 30px 60px -24px rgba(0, 0, 0, 0.7);
+  transform: rotate(1.2deg);
+}
+.hero-v2 .hero-photo img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: none;
+  border-radius: 16px;
+}
+@media (min-width: 900px) {
+  .hero-v2 .hero-layout { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 3.5rem; }
+  .hero-v2 .hero-photo img { max-height: calc(100svh - 160px); }
+}
+@media (max-width: 640px) {
+  .hero-v2 .hero-photo { width: 100%; margin-top: 0.5rem; }
+}
